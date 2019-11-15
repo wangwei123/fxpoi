@@ -1,8 +1,8 @@
 name: fxpoi
-description: A new Flutter plugin.
-version: 0.0.1
-author:
-homepage:
+description: fxpoi is a flutter plugins for read/export excel, csv.
+version: 1.0.0
+author: 2531868871@qq.com
+homepage: https://github.com/wangwei123/fxpoi
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
