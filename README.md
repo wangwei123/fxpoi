@@ -1,14 +1,47 @@
-# flujxl
+# fxpoi
 
-A new Flutter plugin.
+fxpoi is a Flutter plugins for read/export excel, csv.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+1. Clone fxpoi repository to local
+2. Copy fxpoi project to yourproject/plugins folder
+3. Configure yourproject/pubspec.yaml as follows:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  fxpoi:
+    path: ./plugins/fxpoi
+ ```
+ 
+ 4. Read excel/csv to list
+ ```dart
+ import 'package:fxpoi/fxpoi.dart';
+ 
+ var filePath = "/usr/local/users.csv"; // or users.xls|xlsx
+ int offsetLine = 0;
+ int limitLine = 1000;
+ var list = await Fxpoi.readExcelCSVByPage(
+                          filePath, offsetLine, limitLine);
+ for (int i = 0; i <= list.length; i++) {
+   var item = list[i];
+   debugPrint("item: $item \n");
+   debugPrint("item1: ${item[0]} \n");
+   debugPrint("item2: ${item[1]} \n");
+   debugPrint("item3: ${item[2]} \n");
+ }
+ 
+ ```
+ 
+  5. Get the number of excel/csv rows
+   ```dart
+ import 'package:fxpoi/fxpoi.dart';
+ 
+ var filePath = "/usr/local/users.xls"; // or users.csv|xlsx
+ int rowCount = await Fxpoi.getRowCount(filePath);
+ 
+ ```
+
