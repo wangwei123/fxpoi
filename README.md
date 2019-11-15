@@ -2,7 +2,7 @@
 
 fxpoi is a Flutter plugins for read/export excel, csv.
 
-## Getting Started
+## Getting Started 
 
 1. Depend on it 
 Add this to your package's pubspec.yaml file:
@@ -10,7 +10,7 @@ Add this to your package's pubspec.yaml file:
 ```yaml
 dependencies:
   fxpoi: ^1.0.0
-```
+``` 
 
 2. Install it 
 You can install packages from the command line: 
