@@ -1577,7 +1577,14 @@ public final class ExcelUtils {
                 System.out.println("line = " + line);
 
                 List<String> rowData = new ArrayList<>();
-                String[] columns = line.split(";");
+                String splitChar = ";";
+                if(line.contains(",") && line.indexOf(",") < (line.length()-1)) {
+                    splitChar = ",";
+                } else if (line.contains("|") && line.indexOf("|") < (line.length()-1)) {
+                    splitChar = "|";
+                }
+
+                String[] columns = line.split(splitChar);
                 for (int i = 0; i < columns.length; i++) {
                     rowData.add(columns[i]);
                 }
