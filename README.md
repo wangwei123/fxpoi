@@ -2,36 +2,9 @@
 
 fxpoi is a Flutter plugins for read/export excel, csv.
 
-## Getting Started 
-
-1. Depend on it 
-Add this to your package's pubspec.yaml file:
-
-```yaml
-dependencies:
-  fxpoi: ^1.0.0
-``` 
-
-2. Install it 
-You can install packages from the command line: 
-
-with Flutter:
-
-```
-$ flutter pub get
-``` 
-Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
-
-3. Import it 
-Now in your Dart code, you can use:
-
-```dart
-
-import 'package:fxpoi/fxpoi.dart';
-
-```
+## Getting Started
  
- 4. Read excel/csv to list
+ 1. Read excel/csv to list
  ```dart
  import 'package:fxpoi/fxpoi.dart';
  
@@ -45,12 +18,11 @@ import 'package:fxpoi/fxpoi.dart';
    debugPrint("item: $item \n");
    debugPrint("item1: ${item[0]} \n");
    debugPrint("item2: ${item[1]} \n");
-   debugPrint("item3: ${item[2]} \n");
  }
  
  ```
  
-  5. Get the number of excel/csv rows
+  2. Get the number of excel/csv rows
    ```dart
  import 'package:fxpoi/fxpoi.dart';
  
